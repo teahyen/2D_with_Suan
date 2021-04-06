@@ -9,10 +9,12 @@ public class spawnSuan : MonoBehaviour
 
     private int RandomPos;
     private int RandomTime;
+    private GameObject aaa;
 
     void Start()
     {
         StartCoroutine("spawn");
+        Destroy(aaa);
     }
 
     // Update is called once per frame

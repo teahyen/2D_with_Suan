@@ -13,16 +13,15 @@ public class Test : MonoBehaviour
     {
         StartCoroutine("TestTime");
     }
-    int a;
     IEnumerator TestTime()
     {
         while(true) //매 프레임마다 실행
         {
-            a = Random.Range(1, 20); //1부터 19까지 출력
+            GameManager.Instance.a = Random.Range(1, 20); //1부터 19까지 출력
 
             //3초동안 랜덤숫자 실행됨
-            yield return new WaitForSeconds(a); //3초 기다림
-            Debug.Log(a);
+            yield return new WaitForSeconds(GameManager.Instance.a); //3초 기다림
+            Debug.Log(GameManager.Instance.a);
         }
     }
     public void teat()
